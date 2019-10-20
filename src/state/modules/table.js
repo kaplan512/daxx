@@ -1,8 +1,9 @@
-const state = {
-    table: []
+export const state = {
+    table: [],
+    increment: 0
 }
 
-const mutations = {
+export const mutations = {
     ADD_ITEMS (state, payload) {
         if (payload.action === 'add') {
             state.table.push(payload.form)
@@ -19,7 +20,8 @@ const mutations = {
         let index = state.table.findIndex(x => x.id == payload.id)
         state.table.splice(index, 1)
         localStorage.setItem('table', JSON.stringify(state.table))
-    }
+    },
+    INCREMENT: state => state.count++
 }
 
 const actions = {
