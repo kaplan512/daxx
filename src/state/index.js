@@ -1,10 +1,7 @@
-/*eslint-disable */
-// import Vue from 'vue'
-/*eslint-enable */
 import Vuex from 'vuex'
 import table from './modules/table'
 
-export default function (/* { ssrContext } */) {
+export default function () {
     const store = new Vuex.Store({
         modules: {
             table

@@ -31,9 +31,6 @@ const actions = {
         commit('FETCH_LOCAL_STORAGE', localStorageVar)
     },
     removeItem({ commit }, payload) {
-        /*eslint-disable */
-        console.log(payload)
-        /*eslint-enable */
         commit('REMOVE_ITEM', payload)
     }
 }
