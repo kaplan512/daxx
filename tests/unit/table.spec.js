@@ -1,9 +1,12 @@
 import { expect } from 'chai'
 import { shallowMount, createLocalVue } from '@vue/test-utils'
+import Vue from 'vue'
+import Vuetify from 'vuetify'
 import Vuex from 'vuex'
 import Table from '@/components/Table.vue'
 const localVue = createLocalVue()
 localVue.use(Vuex)
+Vue.use(Vuetify)
 import { mutations } from '../../src/state/modules/table'
 const { INCREMENT } = mutations
 
@@ -32,3 +35,10 @@ describe('mutations', () => {
         expect(state.count).to.equal(1)
     })
 })
+
+describe('Table.vue', () => {
+    it('setup correctly', () => {
+        expect(true).to.equal(true)
+    })
+})
+
